@@ -7,7 +7,7 @@ Filtre de Kalman à état 2D appliqué à un oscillateur (circuit RLC) perturbé
 
 Le fonctionnement du filtre de kalman est soumis à des conditions de linéarité et gaussieneté du bruit, pour tester les limites du filtre, il m'a fallu une méthode avec laquelle je vérifie la pertinence du signal résultant après filtrage, l'idée alor était de procéder par rétroaction, on connait un signal d'origine, on le perturbe par un microcontrolleur qui envoie des pulsions de rapport cycle pouvant être variable, on obtient ainsi un signal bruité qui ne respecte pas les conditions du filtrage (bruit non gaussier), et on compare me signal après filtrage à celui qui n'a subi aucun bruit.
 
-Le montage utilisé est celui de montageElectrocinétique.png
+Le montage utilisé est celui de ![](montageElectrocinétique.png)
 
 ## Modèle
 
@@ -40,21 +40,6 @@ Le gain $K_k$ converge vers une valeur stationnaire : 0.0018 .
 
 ## Résultats
 
-![Signal mesuré, signal filtré et signal d'origine](figures/resultat_filtrage.png)
+![Signal filtré avec rapport cyclique constant](RapportCycliqueCT.png)
 
-| Grandeur | Mesure brute | Après filtrage |
-|---|---|---|
-| Erreur RMS | [À COMPLÉTER] | [À COMPLÉTER] |
-
-![Statistique du χ² et seuil de détection](figures/detection_chi2.png)
-
-## Utilisation
-
-```bash
-pip install -r requirements.txt
-python kalman.py
-```
-
-[À COMPLÉTER : paramètres modifiables, fichier de données utilisé.]
-
-## Structure du dépôt
+![Signal filtré avec rapport cyclique variable](RapportCycliqueVAR.png)
