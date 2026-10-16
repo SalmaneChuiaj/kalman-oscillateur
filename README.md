@@ -8,7 +8,7 @@ Filtre de Kalman à état 2D appliqué à un oscillateur (circuit RLC) perturbé
 Le fonctionnement du filtre de kalman est soumis à des conditions de linéarité et gaussieneté du bruit, pour tester les limites du filtre, il m'a fallu une méthode avec laquelle je vérifie la pertinence du signal résultant après filtrage, l'idée alor était de procéder par rétroaction, on connait un signal d'origine, on le perturbe par un microcontrolleur qui envoie des pulsions de rapport cycle pouvant être variable, on obtient ainsi un signal bruité qui ne respecte pas les conditions du filtrage (bruit non gaussier), et on compare me signal après filtrage à celui qui n'a subi aucun bruit.
 
 <p align="center">
-  <img src="figures/montageElectrocinétique.png" alt="Montage Electrocinétique Utilisé" width="400">
+  <img src="montageElectrocinétique.png" alt="Montage Electrocinétique Utilisé" width="400">
 </p>
 ## Modèle
 
